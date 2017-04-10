@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../src/carousel.css">
+</head>
+<body>
+	<div id="carousel">
+		<img src="./images/banner-data.jpg" width="1920">
+		<img src="./images/banner-product.jpg" width="1920">	
+		<img src="./images/banner-virtual.jpg" width="1920">
+	</div>
+
+	<!-- <div class="x-carousel slide">
+		<div class="x-carousel-inner">
+			<div class="item active bg-black">
+				<div class="img" style="background-image: url(./images/banner-data.jpg);"></div>
+			</div>
+			<div class="item bg-gray">
+				<div class="img" style="background-image: url(./images/banner-product.jpg);"></div>
+			</div>
+			<div class="item bg-blue">
+				<div class="img" style="background-image: url(./images/banner-virtual.jpg);"></div>
+			</div>
+		</div>
+		<ol class="x-carousel-indicators">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+		</ol>
+	</div> -->
+	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="../src/carousel.js"></script>
+	<script>
+	xCarousel().init({
+		container: '#carousel'
+	});
+	</script>
+</body>
+</html>

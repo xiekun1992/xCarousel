@@ -1,0 +1,26 @@
+{
+  "name": "x-carousel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiekun1992/xCarousel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xiekun1992/xCarousel/issues"
+  },
+  "homepage": "https://github.com/xiekun1992/xCarousel#readme",
+  "dependencies": {
+    "jqlite": "^0.2.41",
+    "jquery": "^3.2.1"
+  }
+}
