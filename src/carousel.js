@@ -1,3 +1,14 @@
+(function(xCarousel){
+	if(typeof module === 'object' && typeof exports === 'object'){
+		module.exports = xCarousel;
+	}else if(typeof define === 'function' && define.amd){
+		define('xCarousel', xCarousel);
+	}else if(typeof exports === 'object'){
+		exports.xCarousel = xCarousel;
+	}else{
+		this.xCarousel = xCarousel;
+	}
+})(function(){
 	var itemActive = 0;
 	var timer;  
 	var itemLength = $(".x-carousel>.x-carousel-inner>.item").length;
@@ -9,7 +20,7 @@
 		clearInterval(timer);
 		changeItem();
 		carouselResizeFn();
-	})
+	});
 
 	var changeItem = function(){
 		$.each(items, function(i, o){
@@ -21,12 +32,13 @@
 				$(o).fadeOut();
 			}
 		});
-	}
+	};
 	var carouselResizeFn = function(){
 		clearInterval(timer);
 		timer = setInterval(function(){
 			changeItem();
 			itemActive = (itemActive + 1) % itemLength;
 		}, 2000);
-	}
+	};
 	carouselResizeFn();
+});
