@@ -8,7 +8,9 @@
 	}else{
 		this.xCarousel = xCarousel;
 	}
-})(function(){
+})(function(options){
+	var container = options.container;
+	var height = options.height;
 	return {
 		itemActive: 0,
 		timer: null,
@@ -16,8 +18,8 @@
 		indicators: null, 
 		indicatorsArr: null,
 		items: null,
-		init: function(options){
-			var imgs = $(options.container + ">img");
+		init: function(){
+			var imgs = $(container + ">img");
 			var carouselImgHtml = '', carouselIndicatorHtml = '';
 			$.each(imgs, function(i, o){
 				carouselImgHtml += '<div class="item ' + (!i && 'active' || '') + '">' +
@@ -34,11 +36,12 @@
 					carouselIndicatorHtml + 
 				'</ol>' +
 			'</div>';
-			$(options.container).html(carouselHtml);
+			$(container).html(carouselHtml);
+			$(container + ">.x-carousel, " + container + " .x-carousel-inner, " + container + " .x-carousel-inner .item>.img").css('height', height + 'px');
 
 			this.itemLength = imgs.length;
-			this.indicators = $(".x-carousel>.x-carousel-indicators>li");
-			this.items = $(".x-carousel>.x-carousel-inner>.item");
+			this.indicators = $(container + ">.x-carousel>.x-carousel-indicators>li");
+			this.items = $(container + ">.x-carousel>.x-carousel-inner>.item");
 			this.indicatorsArr = Array.prototype.slice.call(this.indicators);
 			var self = this;
 			this.indicators.click(function(){

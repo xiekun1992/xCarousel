@@ -7,9 +7,14 @@
 </head>
 <body>
 	<div id="carousel">
-		<img src="./images/banner-data.jpg" width="1920">
-		<img src="./images/banner-product.jpg" width="1920">	
-		<img src="./images/banner-virtual.jpg" width="1920">
+		<img src="./images/banner-data.jpg">
+		<img src="./images/banner-product.jpg">
+		<img src="./images/banner-virtual.jpg">
+	</div>
+	<div id="carousel1">
+		<img src="./images/banner-product.jpg">
+		<img src="./images/banner-data.jpg">
+		<img src="./images/banner-virtual.jpg">
 	</div>
 
 	<!-- <div class="x-carousel slide">
@@ -33,9 +38,14 @@
 	<script src="../node_modules/jquery/dist/jquery.min.js"></script>
 	<script src="../src/carousel.js"></script>
 	<script>
-	xCarousel().init({
-		container: '#carousel'
-	});
+	xCarousel({
+		container: '#carousel',
+		height: 450
+	}).init();
+	xCarousel({
+		container: '#carousel1',
+		height: 450
+	}).init();
 	</script>
 </body>
 </html>
