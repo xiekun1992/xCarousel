@@ -22,7 +22,7 @@
 			var imgs = $(container + ">img");
 			var carouselImgHtml = '', carouselIndicatorHtml = '';
 			$.each(imgs, function(i, o){
-				carouselImgHtml += '<div class="item ' + (!i && 'active' || '') + '">' +
+				carouselImgHtml += '<div class="item ' + (!i && 'active' || '') + ' ' + $(o).attr('class') + '">' +
 									'<div class="img" style="background-image: url(' + $(o).attr('src') + ');"></div>' +
 								'</div>';
 				carouselIndicatorHtml += '<li class="' + (!i && 'active' || '') + '"></li>';
